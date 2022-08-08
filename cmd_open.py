@@ -11,3 +11,5 @@ for host_ip in host_ip_list:
         print('Хост {} недоступен'.format(host_ip))
     else:
         print('Время отклика до хоста {0} составляет {1} мс'.format(host_ip, response_list.rtt_avg_ms))
+
+ping('8.8.8.8', verbose=True)
