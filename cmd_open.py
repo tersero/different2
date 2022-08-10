@@ -1,7 +1,3 @@
-# import os
-# os.system('mode con: cols=100 lines=40')
-# input("Press any key to continue...")
-
 from pythonping import ping
 
 host_ip_list = ['192.168.1.71', '192.168.1.72', '192.168.1.200']
