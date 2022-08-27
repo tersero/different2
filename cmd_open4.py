@@ -44,6 +44,8 @@ while True:
         print(100 * '-')
         print('Программа завершена')
         break
+    # elif last_digits == \d{1}[-]\d{3}:
+
     print('Старт пинга хоста 192.168.1.' + last_digits)
     full_ip = 'start ping -t 192.168.1.' + last_digits
     # print(full_ip)
