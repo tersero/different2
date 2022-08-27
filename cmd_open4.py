@@ -38,16 +38,19 @@ while True:
     print(100 * '-')
     print('Введите последние цифры IP адреса компьютера или сервера,')
     print('в формате Y-XXX, где Y - номер подсети, а XXX - адрес узла,')
-    print('если вводится только число, то по умолчанию - подсеть 1 ')
-    last_digits = input('например: 0-200 или 201 (завершить - введите 0): ')
+    last_digits = input('например: 0-100 (завершить - введите 0): ')
     if last_digits == '0':
         print(100 * '-')
         print('Программа завершена')
         break
     # elif last_digits == \d{1}[-]\d{3}:
-
-    print('Старт пинга хоста 192.168.1.' + last_digits)
-    full_ip = 'start ping -t 192.168.1.' + last_digits
+    subnet = last_digits[:1]
+    #print(subnet)
+    last_ip = last_digits[2:]
+    #print(last_ip)
+    #print('Старт пинга хоста 192.168.1.' + last_digits)
+    print(f'Старт пинга хоста 192.168.{subnet}.{last_ip}')
+    full_ip = f'start ping -t 192.168.{subnet}.{last_ip}'
     # print(full_ip)
     p = Popen(full_ip, shell=True)
 
